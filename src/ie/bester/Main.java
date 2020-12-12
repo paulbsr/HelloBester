@@ -73,10 +73,7 @@ public class Main {
         //FINAL OUTPUT
         //System.out.println(firstName + " " + lastName + " you borrowed " + resultE + " at " + Q2 + "% APR over " + Q3 + " years, giving you a monthly repayment of " + resultF + " per month, you plank" );
 
-        //THIS IS A TEST COMMENT
-        //MADE ON GITHUB TO SEE WHAT HAPPENS
-        //DID THIS APPEAR LOCALLY?
-        // Uploaded at 00:00 on Fri 11 Dec.
+        // LAST AMENDMENT
         // Sat 12 Dec @ 20:30
 
     }
