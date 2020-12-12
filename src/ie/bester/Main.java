@@ -3,6 +3,7 @@ package ie.bester;
 import java.sql.SQLOutput;
 import java.util.Date;
 import java.util.Scanner;
+import java.text.NumberFormat;
 public class Main {
 
 
@@ -18,15 +19,16 @@ public class Main {
 
         // DATA COLLECTION
         System.out.print("Enter your first name: ");
-        String firstName = scanner.next();
+        String firstName = scanner.next().toUpperCase();
         System.out.print("Enter your last name: ");
-        String lastName = scanner.next();
-        // System.out.println(firstName + lastName);
+        String lastName = scanner.next().toUpperCase();
+        System.out.println(firstName + lastName);
 
         //INPUT QUESTIONS
-
-        System.out.print("Q1. How much did you borrow?: ");
-        int Q1 = scanner.nextInt();
+        while (true) {
+            System.out.print("Q1. How much did you borrow? (€1k to €1m: ");
+            int Q1 = scanner.nextInt();
+        }
 
         System.out.print("Q2. What was the Annual % Interest Rate?: ");
         float Q2 = scanner.nextFloat();
@@ -51,14 +53,31 @@ public class Main {
         float resultD = (float) (Q1p * resultC);
         // System.out.println(resultC);
 
-        //OUTPUT
-        System.out.println(firstName + " " + lastName + " you borrowed €" + Q1 + " at " + Q2 + "% APR over " + Q3 + " years, giving you a monthly repayment of €" + resultD + " per month, you plank" );
+        //Number Formatting
+        NumberFormat currency = NumberFormat.getCurrencyInstance();
+        String resultE = currency.format(Q1);
+        String resultF = currency.format(resultD);
+        float monthly = resultD;
+        // System.out.println(resultE);
+
+        //CONDITIONALS
+       if (monthly < 1500)
+            System.out.println(firstName + " " + lastName + " you borrowed " + resultE + " at " + Q2 + "% APR over " + Q3 + " years, giving you a monthly repayment of " + resultF + " per month, you STAR" );
+
+       else if (monthly > 1500)
+            System.out.println(firstName + " " + lastName + " you borrowed " + resultE + " at " + Q2 + "% APR over " + Q3 + " years, giving you a monthly repayment of " + resultF + " per month, you PLANK!!!" );
+
+        // System.out.println(firstName + " " + lastName + " you borrowed " + resultE + " at " + Q2 + "% APR over " + Q3 + " years, giving you a monthly repayment of " + resultF + " per month, you plank" );
+        // System.out.println(firstName + " " + lastName + " you borrowed " + resultF + " at " + Q2 + "% APR over " + Q3 + " years, giving you a monthly repayment of Daniel#" + resultE + " per month, you plank" );
+
+        //FINAL OUTPUT
+        //System.out.println(firstName + " " + lastName + " you borrowed " + resultE + " at " + Q2 + "% APR over " + Q3 + " years, giving you a monthly repayment of " + resultF + " per month, you plank" );
 
         //THIS IS A TEST COMMENT
         //MADE ON GITHUB TO SEE WHAT HAPPENS
         //DID THIS APPEAR LOCALLY?
         // Uploaded at 00:00 on Fri 11 Dec.
-        // Sat 12 Dec
+        // Sat 12 Dec @ 20:30
 
     }
 }
