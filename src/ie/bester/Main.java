@@ -15,7 +15,7 @@ public class Main {
 
         // DATE
         Date rightNow = new Date();
-        System.out.println(rightNow);
+        System.out.println("Local Date/Time right now is: " + rightNow);
 
         // DATA COLLECTION
         System.out.print("Enter your first name: ");
@@ -25,10 +25,9 @@ public class Main {
         System.out.println(firstName + lastName);
 
         //INPUT QUESTIONS
-        while (true) {
-            System.out.print("Q1. How much did you borrow? (€1k to €1m: ");
-            int Q1 = scanner.nextInt();
-        }
+        System.out.print("Q1. How much did you borrow?");
+        int Q1 = scanner.nextInt();
+
 
         System.out.print("Q2. What was the Annual % Interest Rate?: ");
         float Q2 = scanner.nextFloat();
@@ -75,7 +74,7 @@ public class Main {
 
         // LAST AMENDMENT
         // Sat 12 Dec @ 20:30
-        // Sun 13 Decc @ 11:00
+        // Sun 13 Decc @ 11:00......
 
     }
 }
