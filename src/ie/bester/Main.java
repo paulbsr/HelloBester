@@ -28,16 +28,12 @@ public class Main {
         System.out.print("Q1. How much did you borrow?");
         int Q1 = scanner.nextInt();
 
-
         System.out.print("Q2. What was the Annual % Interest Rate?: ");
         float Q2 = scanner.nextFloat();
         float monthlyInterest = Q2 / PERCENT / MONTHS_IN_YEAR;
 
         System.out.print("Q3. Over how many years?: ");
         int Q3 = scanner.nextByte();
-
-
-
 
         //CALCULATIONS
         // double result = Q1 + Q2r + Q3n;
@@ -50,7 +46,7 @@ public class Main {
         double resultBottom = resultB - 1;
         double resultC = resultTop / resultBottom;
         float resultD = (float) (Q1p * resultC);
-        // System.out.println(resultC);
+
 
         //Number Formatting
         NumberFormat currency = NumberFormat.getCurrencyInstance();
