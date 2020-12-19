@@ -1,19 +1,24 @@
 package ie.bester;
 
-//1. CLASS
+//1. createCLASS
 public class Klas {
 
-    //2. FIELD (variables)
+    //2. createFIELD (variables)
     private int veld = 24;
 
-    //3. METHOD
+    //3. createMETHOD
     public int metode() {
         return 0;
     }
-}
-    //4. OBJECT
-    Klas objek = new Klas();
 
-    //5. ACCESS FIELDS & METHODS OF THE CLASS
-    int resultaat0 = objek.veld;
-    int resultaat1 = objek.metode();
+    public static void main(String[] args) {
+
+        //4. createOBJECT
+        Klas objek = new Klas();
+
+        //5. ACCESS FIELDS & METHODS OF THE CLASS
+        int resultaat0 = objek.veld;
+        int resultaat1 = objek.metode();
+
+    }
+}
